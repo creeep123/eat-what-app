@@ -28,7 +28,7 @@ function serve() {
 	};
 }
 
-export default {
+module.export = [ {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
@@ -73,4 +73,12 @@ export default {
 	watch: {
 		clearScreen: false
 	}
-};
+},{
+	input: 'src/fonts/zpix.ttf',
+	output: {
+		file: 'public/build/fonts/zpix.ttf'
+	},
+	watch: {
+		clearScreen: false
+	}
+}]
