@@ -14,11 +14,11 @@
 
 <style>
 	@font-face {
-		font-family: 'zpix';
+		font-family: "zpix";
 		src: url('./fonts/zpix.ttf');
 	}
 	.nes {
-		font-family: zpix;
+		font-family: "zpix";
 	}
 
 	@media (min-width: 640px) {

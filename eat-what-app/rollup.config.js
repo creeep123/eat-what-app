@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import copy from 'rollup-plugin-copy'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -28,7 +29,7 @@ function serve() {
 	};
 }
 
-module.export = [ {
+export default {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
@@ -46,6 +47,12 @@ module.export = [ {
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
+
+		copy({
+			targets:[
+				{src:'src/fonts/zpix.ttf',dest:'public/build/fonts'}
+			]
+		}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
@@ -73,12 +80,4 @@ module.export = [ {
 	watch: {
 		clearScreen: false
 	}
-},{
-	input: 'src/fonts/zpix.ttf',
-	output: {
-		file: 'public/build/fonts/zpix.ttf'
-	},
-	watch: {
-		clearScreen: false
-	}
-}]
+};
