@@ -31,21 +31,42 @@
 </header>
 
 <style>
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9;
-        border-bottom: 4px solid #d3d3d3;
-        background-color: white;
-    }
-    header .container {
-        display: flex;
-        align-items: baseline;
-        max-width: 980px;
-        margin: 0 auto;
-        padding-top: 1rem;
-        transition: all 0.2s ease;
-    }
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 4px solid #D3D3D3;
+  background-color: white;
+}
+
+header > .container {
+  display: flex;
+  align-items: baseline;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+header > .container > .nav-brand {
+  margin-right: auto;
+}
+header > .container > .social-buttons {
+  margin-left: auto;
+}
+
+.nav-brand .brand-logo {
+  margin-right: 1rem;
+}
+.nav-brand > a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.social-buttons p {
+  margin-bottom: 0;
+}
 </style>

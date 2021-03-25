@@ -50,7 +50,7 @@ export default {
 
 		copy({
 			targets:[
-				{src:'src/fonts/zpix.ttf',dest:'public/build/fonts'}
+				{src:'src/fonts/zpix-v1.2.1-legacy.ttf',dest:'public/build/'}
 			]
 		}),
 
