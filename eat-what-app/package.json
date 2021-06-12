@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "nes.css": "^2.3.0",
+    "rollup-plugin-copy-assets": "^2.0.3",
     "sirv-cli": "^1.0.0"
   }
 }

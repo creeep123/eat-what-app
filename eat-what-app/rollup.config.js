@@ -4,7 +4,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
-import copy from 'rollup-plugin-copy'
+// import copy from 'rollup-plugin-copy'
+import copy from "rollup-plugin-copy-assets";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -49,9 +50,18 @@ export default {
 		css({ output: 'bundle.css' }),
 
 		copy({
-			targets:[
-				{src:'src/fonts/zpix-v1.2.1-legacy.ttf',dest:'public/build/'}
-			]
+			// -plugin-copy 的配置
+			// targets:[
+			// 	{src:'src/fonts/zpix-v1.2.1-legacy.ttf',dest:'public/build/'}
+			// ]
+
+			// -plugin-assets 的配置
+			assets: [
+				// You can include directories
+				"src/fonts",
+				// You can also include files
+				"src/fonts/zpix-v1.2.1-legacy.ttf",
+			  ],
 		}),
 
 		// If you have external dependencies installed from
