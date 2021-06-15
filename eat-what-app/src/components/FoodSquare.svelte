@@ -1,19 +1,5 @@
 <script>
-    let foods = [
-        {
-            icon:
-                "https://img.icons8.com/color/48/000000/pizza-five-eighths.png",
-            name: "pizza",
-        },
-        { icon: "", name: "2" },
-        { icon: "", name: "3" },
-        { icon: "", name: "4" },
-        { icon: "", name: "5" },
-        { icon: "", name: "6" },
-        { icon: "", name: "7" },
-        { icon: "", name: "8" },
-        { icon: "", name: "9" },
-    ];
+    export let foods
 </script>
 
 <div class="foodSquare">
@@ -37,7 +23,7 @@
 <style>
     .foodSquare {
         width:100%;
-        height:100%;
+        /* height:100%; */
     }
     /* @media screen and (min-width: 960px) {
         .foodSquare {

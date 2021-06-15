@@ -7,13 +7,13 @@
 	<div class="nes">
 		<!-- <Header /> -->
 		<main>
-			<img
+			<!-- <img
 				src="https://img.icons8.com/color/48/000000/jelly.png"
 				alt="Steak"
 				class="nes-avatar is-rounded is-large"
 				style="image-rendering: pixelated;"
 			/>
-			<section class="blank">一般人看不到这一行</section>
+			<section class="blank">一般人看不到这一行</section> -->
 			<CardContainer />
 		</main>
 	</div>
@@ -36,8 +36,8 @@
 	.nes {
 		font-family: "zpix";
 		color: rgb(33, 37, 41);
-		max-width: 960px;
-		width: 80%;
+		min-width: 600px;
+		/* width: 80%; */
 	}
 	.blank {
 		height: 5em;
