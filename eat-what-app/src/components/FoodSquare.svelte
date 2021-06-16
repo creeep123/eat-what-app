@@ -1,10 +1,11 @@
 <script>
     export let foods
+    export let showFoods
 </script>
 
 <div class="foodSquare">
     <div class="grid">
-        {#each foods as food, i}
+        {#each showFoods as food, i}
             <div class="nes-container is-dark with-title">
                 <p class="title">{food.name}</p>
                 <p>
@@ -12,7 +13,7 @@
                         src={food.icon}
                         alt={food.name}
                         class="nes-avatar is-rounded is-large"
-                        style="image-rendering: pixelated;"
+                        style={`image-rendering: pixelated; transform:rotate(${food.rotate}deg);`}
                     />
                 </p>
             </div>
