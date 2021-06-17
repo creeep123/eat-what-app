@@ -1,13 +1,24 @@
 <script>
     // export let foods
-    export let randomFood
+    export let randomFood;
+    export let chance;
+    let buttonState;
+    let buttonText;
+    $: buttonText = chance > 0 ? `随机` : `机会已用完`;
+    $: buttonState = chance > 0 ? "is-primary" : "is-disabled";
 </script>
 
 <div class="controler">
     <div>
-        <button type="button" class="nes-btn is-primary" on:click={randomFood}>随机一个</button>
+        <button
+            type="button"
+            class={`nes-btn ${buttonState}`}
+            disabled={buttonState == "is-disabled" ? true : false}
+            on:click={randomFood}>{buttonText}</button
+        >
     </div>
-    <div>
+    <span>（剩余次数：{chance}）</span>
+    <!-- <div>
         <label>
             <input type="checkbox" class="nes-checkbox" checked />
             <span>辣的</span>
@@ -18,7 +29,7 @@
             <input type="checkbox" class="nes-checkbox" checked />
             <span>贵的</span>
         </label>
-    </div>
+    </div> -->
 </div>
 
 <style>
@@ -28,6 +39,6 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 160px;
+        /* height: 160px; */
     }
 </style>

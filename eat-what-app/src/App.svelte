@@ -7,40 +7,53 @@
 	<div class="nes">
 		<!-- <Header /> -->
 		<main>
-			<!-- <img
-				src="https://img.icons8.com/color/48/000000/jelly.png"
-				alt="Steak"
-				class="nes-avatar is-rounded is-large"
-				style="image-rendering: pixelated;"
-			/>
-			<section class="blank">一般人看不到这一行</section> -->
+			<section class="title">
+				<h1>¿ 吃什么 ?</h1>
+				<div>
+					<img
+					src="https://gitee.com/yxon123/gitee-sources/raw/master//Images/2344124.jpg"
+					alt="Steak"
+					class="nes-avatar is-rounded is-large"
+					style="image-rendering: pixelated;"
+				/>
+				</div>
+			</section>
 			<CardContainer />
 		</main>
 	</div>
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
+	@media screen and (max-width: 2100px) {
+        .nes{
+            width:520px;
+        }
+    }
+	@media screen and (max-width: 600px) {
+        .nes{
+            width:360px;
+        }
 	}
 	@font-face {
 		font-family: "zpix";
 		src: url("./fonts/zpix-v1.2.1-legacy.ttf");
 	}
-	.root{
+	.root {
 		display: flex;
 		justify-content: center;
-		width: 100%;
+		/* width: 100%; */
 	}
 	.nes {
 		font-family: "zpix";
 		color: rgb(33, 37, 41);
-		min-width: 600px;
-		/* width: 80%; */
 	}
-	.blank {
-		height: 5em;
+	.title{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		margin-bottom: 40px;
 	}
 
 	/* @media (min-width: 640px) {

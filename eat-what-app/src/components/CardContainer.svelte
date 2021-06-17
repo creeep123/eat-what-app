@@ -41,7 +41,8 @@
         },
     ];
 
-    let showFoods = foods
+    let showFoods = foods;
+    let chance = 1;
 
     //整体打乱
     // function randomNumber() {
@@ -54,34 +55,40 @@
     //     foods = [...foods];
     // }
 
-    function randomNumber(){
-        return Math.floor(Math.random()*9)
+    function randomNumber() {
+        return Math.floor(Math.random() * 9);
     }
 
-    function randomFood(){
-        let newFoods = []
-        let fingerIcon = 'https://img.icons8.com/color/48/000000/one-finger--v1.png'
-        let pickedNum = randomNumber()
-        const rotate = [135,180,225,90,0,270,45,0,315]
-        for(let i=0;i<9;i++){
+    function randomFood() {
+        let newFoods = [];
+        let fingerIcon =
+            "https://img.icons8.com/color/48/000000/one-finger--v1.png";
+        let pickedNum = randomNumber();
+        const rotate = [135, 180, 225, 90, 0, 270, 45, 0, 315];
+        for (let i = 0; i < 9; i++) {
             newFoods.push({
-                icon:fingerIcon,
-                name:"",
-                rotate:rotate[i]
-            })
+                icon: fingerIcon,
+                name: "",
+                rotate: rotate[i],
+            });
         }
-        newFoods[4]=foods[pickedNum]
-        showFoods=newFoods 
+        newFoods[4] = foods[pickedNum];
+        showFoods = newFoods;
+        chance = chance-1
     }
 </script>
 
 <section class="cardContainer">
-    <div class="nes-container with-title">
-        <h3 class="title">吃什么？</h3>
+    <div class="nes-container">
+        <!-- <h3 class="title"></h3> -->
         <FoodSquare {showFoods} {foods} />
-        <Controler bind:foods {randomFood} />
+        <Controler bind:foods bind:chance {randomFood} />
     </div>
 </section>
 
 <style>
+    .cardContainer{
+        /* margin-bottom: 30px; */
+        margin: 30px 6px auto 6px;
+    }
 </style>
