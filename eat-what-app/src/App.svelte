@@ -24,6 +24,9 @@
 </div>
 
 <style>
+  :global(body) {
+    background: url('./assets/philipp-a-urlich-oldtree-640x320-1b.jpg');
+  }
   @media screen and (max-width: 2100px) {
     .nes {
       width: 540px;
