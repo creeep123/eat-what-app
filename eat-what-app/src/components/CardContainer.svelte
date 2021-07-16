@@ -79,7 +79,7 @@
 </script>
 
 <section class="cardContainer">
-  <div class="nes-container outer-nes">
+  <div class="nes-container is-rounded outer-nes">
     <!-- <h3 class="title"></h3> -->
     <FoodSquare {showFoods} {foods} />
     <Controler bind:foods bind:chance {randomFood} />
